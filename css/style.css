@@ -34,7 +34,7 @@ section {
 .header {
   background-color: var(--bg-color-transparent);
   position: fixed;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -60,6 +60,7 @@ section {
 }
 
 .home {
+  padding: 0rem 2rem;
   background: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.205)),
     url("../images/intro-bg.jpg") no-repeat center;
   background-size: cover;
@@ -162,4 +163,126 @@ section {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+/* Teléfonos pequeños (menores a 600px) */
+@media (max-width: 650px) {
+  .header .logo img {
+    height: 2.5rem;
+  }
+
+  .header .navbar a {
+    text-decoration: none;
+    margin-left: 3rem;
+    color: var(--text-color-dark);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+
+  .home .home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .home .home-content h1{
+    font-size: 3.5rem;
+  }
+
+  .home .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .social-media a {
+    width: 3rem;
+    height: 3rem;
+    border: 0.1rem solid var(--color-blue);
+    font-size: 1.5rem;
+    margin: 1rem 1rem 2rem 0;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #5E5E5E;
+    border-radius: 4rem;
+  
+    box-shadow: 0 0 1rem var(--text-color-light);
+    color: var(--bg-color-light);
+    font-weight: 600;
+    transition: 0.5s ease;
+  }
+
+  .btn a {
+    font-size: 1rem;
+  }
+
+  .btn .btn-icon{
+    font-size: 2rem;
+  }
+}
+
+/* Teléfonos estándar (hasta 768px) */
+@media (max-height: 600px) {
+  .header .logo img {
+    height: 5rem;
+  }
+
+  .header .navbar a {
+    margin-left: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+
+  .home .home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .home .home-content h1{
+    font-size: 4rem;
+  }
+
+  .home .home-content h3 {
+    font-size: 3rem;
+  }
+
+  .social-media a {
+    width: 4rem;
+    height: 4rem;
+    border: 0.1rem solid var(--color-blue);
+    font-size: 2.5rem;
+    margin: 2rem 2rem 2rem 0;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.2rem;
+    background: #5E5E5E;
+    border-radius: 4rem;
+  
+    box-shadow: 0 0 1rem var(--text-color-light);
+    color: var(--bg-color-light);
+    font-weight: 600;
+    transition: 0.5s ease;
+  }
+
+  .btn a {
+    font-size: 1.5rem;
+  }
+
+  .btn .btn-icon{
+    font-size: 3rem;
+  }
 }
